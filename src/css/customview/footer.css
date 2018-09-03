@@ -1,0 +1,15 @@
+.footer {
+    background-color: #aeaeae;
+    padding: 13px 0;
+    font-size: 17px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    position: absolute;
+}
+
+.footer img{
+    height: 1.6rem;
+    border-radius: 20%;
+}

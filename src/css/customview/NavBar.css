@@ -1,0 +1,49 @@
+.navbar {
+    z-index: 1;
+    height: 5rem;
+    background-color: #BB2028;
+    margin-bottom: 5px;
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+}
+
+.navbar a {
+    font-weight: 400;
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .chosen {
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: Raleway; /* Гарнитура шрифта */
+    src: url(../../fonts/Raleway.ttf); /* Путь к файлу со шрифтом */
+}
+
+body {
+    font-family: Raleway;
+}
+
+.navbar .dropdown>div> a{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.navbar .dropdown a:nth-child(2n+1) {
+    background-color: #9d9e9d;
+}
+
+.navbar .dropdown a:nth-child(2n) {
+
+    background-color: #919191;
+}
+
+
+
+

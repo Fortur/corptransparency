@@ -1,0 +1,36 @@
+/* Стрелки CSS */
+
+
+.arrow-right:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    border: 10px solid transparent;
+    border-left-color: #BB2028;
+    border-right: 0;
+    z-index: -2;
+}
+
+.arrow-right:after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 40px;
+    border: 8px solid transparent;
+    border-left-color: #f8f9fa;
+    border-right: 0;
+    z-index: -1;
+}
+
+#arrow{
+    border-top: #BB2028 solid 1px;
+}
+
+#arrow div{
+    padding-top: 5px;
+}
+
+#arrow p:first-child{
+    color: #BB2028;
+}
