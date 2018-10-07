@@ -17,7 +17,9 @@
     "react-scripts": "1.0.17",
     "react-svg-piechart": "^2.0.2",
     "reactstrap": "^5.0.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "sequelize": "^4.39.0",
+    "sequelize-cli": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

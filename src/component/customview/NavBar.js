@@ -71,7 +71,7 @@ export default class NavBar extends React.Component {
                   <DropdownItem href="/aboutUs">О РРС и исследовании</DropdownItem>
                   <DropdownItem href="/aboutUs">Экспертный совет и партнеры</DropdownItem>
                   <DropdownItem href="/aboutUs">Положение и методика</DropdownItem>
-                  <DropdownItem href="/aboutUs">Часто задаваемые вопросы </DropdownItem>
+                  <DropdownItem href="/FAQ">Часто задаваемые вопросы </DropdownItem>
                   <DropdownItem href="/aboutUs">Обратная связь </DropdownItem>
                 </DropdownMenu>
               </Dropdown>

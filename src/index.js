@@ -8,6 +8,7 @@ import Store from './service/Store';
 import Login from './component/Login'
 import MainPage from './component/MainPage'
 import AboutUsPage from './component/AboutUsPage'
+import FAQ from './component/faq'
 
 const history = createBrowserHistory();
 
@@ -19,6 +20,7 @@ ReactDOM.render(
         <Route path='/aboutUs' component={AboutUsPage} />
         <Route path='/login' component={Login}/>
         <Route path='/portfolio' component={MainPage}/>
+        <Route path='/FAQ' component={FAQ}/>
       </switch>
     </Router>
   </Provider>

@@ -1,7 +1,11 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+#passwords
+database.json
+
 # dependencies
 /node_modules
+
 # testing
 /coverage
 
@@ -9,6 +13,7 @@
 /build
 
 # misc
+/.idea
 .DS_Store
 .env.local
 .env.development.local

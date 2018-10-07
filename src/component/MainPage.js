@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Axios from 'axios';
 import NavBar from "./customview/NavBar";
 import Footer from './customview/footer';
 import '../css/customview/main.css';
@@ -12,22 +13,28 @@ import {
 
 const items = [
   {
+    key: '1',
     text: '5 мая 2017 году утверждена Концепция Публичной нефинансовой отчетности'
   },
   {
-    text:'37% обследуемых госкомпаний используют м/н стандарты'
+    key: '2',
+    text: '37% обследуемых госкомпаний используют м/н стандарты'
   },
   {
-    text:'955 компаний обследовано в 2017 году '
+    key: '3',
+    text: '955 компаний обследовано в 2017 году '
   },
   {
+    key: '4',
     text: '550 компаний не выпустили отчеты в 2017 году'
   },
   {
-    text:'50 компаний использовали м/н стандарты в 2017 году'
+    key: '5',
+    text: '50 компаний использовали м/н стандарты в 2017 году'
   },
   {
-    text:'Антикоррупционная деятельность и Закупки раскрываются наиболее полно'
+    key: '6',
+    text: 'Антикоррупционная деятельность и Закупки раскрываются наиболее полно'
   }
 
 ];
@@ -112,6 +119,19 @@ const dataUser = [{
 ]
 
 
+//Your React component
+// fetchExternalHTML: function (fileName) {
+//   Ajax.getJSON('/myAPI/getExternalHTML/' + fileName).then(
+//     response => {
+//       this.setState({
+//         extHTML: response
+//       });
+//     }, err => {
+//       //handle your error here
+//     }
+//   );
+// }
+
 class MainPage extends Component {
 
   constructor(props) {
@@ -122,32 +142,33 @@ class MainPage extends Component {
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
-  }
+  };
+
 
   onExiting() {
     this.animating = true;
-  }
+  };
 
   onExited() {
     this.animating = false;
-  }
+  };
 
   next() {
     if (this.animating) return;
     const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
-    this.setState({ activeIndex: nextIndex });
-  }
+    this.setState({activeIndex: nextIndex});
+  };
 
   previous() {
     if (this.animating) return;
     const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
-    this.setState({ activeIndex: nextIndex });
-  }
+    this.setState({activeIndex: nextIndex});
+  };
 
   goToIndex(newIndex) {
     if (this.animating) return;
     this.setState({activeIndex: newIndex});
-  }
+  };
 
   onChangeItem = (index) => {
     console.log("index now :" + this.state.currentItem);
@@ -161,9 +182,9 @@ class MainPage extends Component {
     const slides = items.map((item) => {
       return (
         <CarouselItem className='slider-block container-fluid px-0'
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={item.text}>
+                      onExiting={this.onExiting}
+                      onExited={this.onExited}
+                      key={item.text}>
           <h5>
             {item.text}
           </h5>
@@ -174,7 +195,6 @@ class MainPage extends Component {
     return (
       <div className='MainDiv'>
         <NavBar currenPage="mainPage"/>
-
         <div className='content'>
           <br/>
           <br/>
@@ -215,7 +235,8 @@ class MainPage extends Component {
                   next={this.next}
                   previous={this.previous}>
                   {slides}
-                  <CarouselIndicators  className='position-relative' items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex}/>
+                  <CarouselIndicators className='position-relative' items={items} activeIndex={activeIndex}
+                                      onClickHandler={this.goToIndex}/>
                 </Carousel>
               </div>
               <div className='col-8'>
